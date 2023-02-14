@@ -1,0 +1,28 @@
+//Fonts
+$font: "Monserrat";
+$font-fallback: "Arial";
+$font-generic: sans-serif;
+$my-font: $font, $font-fallback, $font-generic;
+
+//Base Colors
+
+$color-base-white: #ffffff;
+$color-base-black: #333333;
+$color-base-grey: #bdbdbd;
+$color-base-primary: #7859cf;
+$color-base-secondary: #f0ebff;
+
+// ALt Colors
+$color-alt-lightGrey: #e2e2e2;
+$color-alt-primaryDarker: #593cac;
+$color-alt-primaryLighter: #9070ec;
+
+// Background Colors
+$color-bg-article: #f3ebe1;
+$color-bg-grey: #f8f8f8;
+$color-bg-espresso: #e5e6e8;
+$color-bg-latte: #eae6fc;
+
+//brakepoints
+$tablet-width: 768px;
+$desktop-width: 1360px;

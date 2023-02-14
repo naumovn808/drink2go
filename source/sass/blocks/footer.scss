@@ -1,0 +1,337 @@
+.footer {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "wrapper wrapper wrapper"
+      "shop media contacts"
+      "academy academy academy";
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
+    max-width: 1440px;
+    grid-template-areas: "wrapper shop media contacts"
+      "academy academy academy academy";
+  }
+}
+
+.wrapper {
+  grid-area: wrapper;
+  margin-top: 4px;
+  margin-bottom: 22px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $color-base-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+    border: none;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0;
+    margin-top: 40px;
+  }
+}
+
+.footer__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-base-black;
+    margin-top: -30px;
+  }
+}
+
+.social {
+  display: flex;
+  padding-left: 0;
+  margin-right: -5px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 44px;
+    margin-top: 10px;
+  }
+}
+
+.social__item {
+  list-style: none;
+  border-radius: 4px;
+  margin: 0 7px;
+
+  &:hover,
+  :focus {
+    background-color: $color-base-secondary;
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+}
+
+.social__link {
+  list-style: none;
+
+  &:hover::before {
+    background-color: $color-base-primary;
+  }
+
+  &:focus::before {
+    background-color: $color-base-primary;
+  }
+
+  &:active::before {
+    background-color: $color-base-primary;
+  }
+}
+
+.social__link-vk {
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    -webkit-mask-image: url("/img/icons/stack.svg#vk");
+    mask-image: url("/img/icons/stack.svg#vk");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background: $color-base-grey;
+
+
+    @media (min-width: $desktop-width) {
+      padding-left: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.social__pinterest {
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    -webkit-mask-image: url("/img/icons/stack.svg#pinterest");
+    mask-image: url("/img/icons/stack.svg#pinterest");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background: $color-base-grey;
+  }
+}
+
+.social__link-ok {
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    -webkit-mask-image: url("/img/icons/stack.svg#ok");
+    mask-image: url("/img/icons/stack.svg#ok");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background: $color-base-grey;
+  }
+}
+
+.footer__list {
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $color-base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin-top: 0;
+    margin-right: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -23px;
+    width: 370px;
+    margin-right: 0;
+  }
+}
+
+
+.footer__list-shop {
+  grid-area: shop;
+}
+
+.footer__list-media {
+  grid-area: media;
+}
+
+.footer__list-contact {
+  grid-area: contact;
+}
+
+
+.footer__item {
+  list-style: none;
+  padding-bottom: 14px;
+  position: relative;
+
+  &:hover > .footer__link {
+    color: $color-alt-primaryLighter;
+  }
+
+  &:active > .footer__link {
+    color: $color-alt-primaryDarker;
+  }
+}
+
+.footer__item-phone {
+  margin-left: 20px;
+  padding-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 16px;
+    background-image: url("/img/icons/stack.svg#phone");
+    position: absolute;
+    top: 0;
+    left: -20px;
+  }
+}
+
+.footer__item-location {
+  margin-left: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 16px;
+    background-image: url("/img/icons/stack.svg#location");
+    position: absolute;
+    top: 0;
+    left: -20px;
+  }
+}
+
+.footer__item-location > .footer__desc-link {
+  font-size: 16px;
+}
+
+.footer__title {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: $color-base-primary;
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+  }
+}
+
+.footer__link {
+  word-break: break-all;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-base-black;
+  text-decoration: none;
+}
+
+.footer__desc-link {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+    margin-bottom: 0;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.for-htmlacademy {
+  grid-area: academy;
+  padding: 0 0 20px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 16px;
+    -webkit-mask-image: url("/img/icons/stack.svg#htmlacademy");
+    mask-image: url("/img/icons/stack.svg#htmlacademy");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background: $color-base-grey;
+  }
+
+  &:hover::after {
+    background: $color-base-primary;
+  }
+
+  &:focus::after {
+    background: $color-base-primary;
+  }
+
+  &:active::after {
+    background: $color-alt-primaryDarker;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.for-htmlacademy-desc {
+  margin: 0;
+  padding-right: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-base-grey;
+}

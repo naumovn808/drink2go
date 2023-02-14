@@ -1,0 +1,226 @@
+.advantages {
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 82px;
+  }
+}
+
+.advantages__desc {
+  padding-top: 15px;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-base-primary;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+  }
+}
+
+.advantages__title {
+  word-wrap: break-word;
+  margin-top: 6px;
+  margin-bottom: 28px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
+  text-align: center;
+  color: $color-base-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 64px;
+  }
+}
+
+.causes {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4px;
+    row-gap: 0;
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+  }
+}
+
+.causes__item {
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 82px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.causes__title {
+  margin-bottom: 6px;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: $color-base-black;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 31px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 28px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+.causes__speed {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-image: url("/img/icons/stack.svg#speed");
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 8px;
+      left: -72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      margin-top: 24px;
+      margin-right: 36px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.causes__convenience {
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("/img/icons/stack.svg#convenience");
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 4px;
+      left: -72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      margin-top: 24px;
+      margin-right: 36px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.causes__energy {
+  margin-right: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("/img/icons/stack.svg#energy");
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 20px;
+      position: absolute;
+      top: 0;
+      left: -72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      margin-top: 24px;
+      margin-right: 34px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.causes__eco {
+  margin-right: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto;
+    background-image: url("/img/icons/stack.svg#eco");
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 4px;
+      left: -72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      margin-top: 24px;
+      margin-right: 72px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.causes__desc {
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-base-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin-left: 20px;
+  }
+}

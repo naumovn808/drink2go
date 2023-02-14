@@ -1,0 +1,117 @@
+.products {
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
+  margin-bottom: 40px;
+  grid-area: products;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-right: 22px;
+    margin-left: -10px;
+    padding-left: 0;
+    margin-bottom: 18px;
+  }
+}
+
+.card {
+  background-color: $color-base-white;
+  border-radius: 4px;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
+}
+
+.card__button {
+  padding-left: 44px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("/img/icons/stack.svg#cart-product");
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+  }
+}
+
+.card__link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.card__picture {
+  width: 100%;
+}
+
+.card__img {
+  display: block;
+  margin: 20px auto 24px auto;
+}
+
+.card__title {
+  word-break: break-all;
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color-base-black;
+  margin: 0 auto;
+  margin-bottom: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+.card__desc {
+  word-break: break-all;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-base-black;
+  margin: 0 auto;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color-base-black;
+}
+
+.for-users {
+  margin: 12px auto;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 18px;
+  }
+}

@@ -1,0 +1,247 @@
+.main-article {
+  background-color: $color-bg-article;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, #f3ebe1 77%, #ffffff 23%, #ffffff 23%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, #f3ebe1 100%, #ffffff 0%, #ffffff 0%);
+    margin-bottom: 82px;
+  }
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    margin-top: 10px;
+  }
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slider__buttons {
+  z-index: 0;
+  height: 714px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 34px;
+    padding: 0 10px;
+  }
+}
+
+.slider__button {
+  width: 80px;
+  height: 640px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.slider__button-left:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.slider__button-right:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+}
+
+.arrow-left {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-top: 4px solid $color-base-primary;
+  border-right: 4px solid $color-base-primary;
+  transform: rotate(-135deg);
+}
+
+.slider__button-disabled > span {
+  border-top: 4px solid $color-base-grey;
+  border-right: 4px solid $color-base-grey;
+}
+
+.arrow-right {
+  margin-left: auto;
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-top: 4px solid $color-base-primary;
+  border-right: 4px solid $color-base-primary;
+  transform: rotate(45deg);
+}
+
+.slide__info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  order: 2;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    margin-bottom: -57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    align-items: start;
+    margin-left: 28px;
+  }
+}
+
+.slide__picture {
+  margin-top: 20px;
+  order: 1;
+}
+
+.slide__announce {
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: $color-base-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+}
+
+.slide__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: $color-base-black;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 62px;
+    line-height: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.5px;
+  }
+}
+
+.slide__desc {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: $color-base-black;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 500px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 32px;
+    max-width: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.slide__for-users {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.slide__price-old {
+  text-decoration-line: line-through;
+  color: $color-base-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.slide__price-new {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color-base-black;
+  padding-right: 10px;
+}
+
+.slider__dots {
+  z-index: 1;
+  display: none;
+  padding-bottom: 70px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 6px;
+    display: flex;
+  }
+}
+
+.slider__dot {
+  cursor: pointer;
+  display: block;
+  border: none;
+  width: 62px;
+  height: 4px;
+  background-color: $color-base-white;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:active {
+    background-color: $color-base-primary;
+  }
+}
+
+.slider__dot-active {
+  background-color: $color-base-primary;
+}

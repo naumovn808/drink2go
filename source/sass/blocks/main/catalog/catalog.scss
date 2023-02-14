@@ -1,0 +1,329 @@
+.form-products {
+  background-color: $color-bg-grey;
+}
+
+.catalog {
+  padding-bottom: 44px;
+  margin: 0 auto;
+  max-width: 1440px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "desc desc desc desc"
+      "title title title title"
+      "sort sort sort sort"
+      "form  products products products"
+      "pagination pagination pagination pagination";
+  }
+}
+
+.catalog__desc {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-base-primary;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 0;
+  grid-area: desc;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 66px;
+    font-size: 14px;
+  }
+}
+
+.catalog__title {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 36px;
+  text-align: center;
+  color: $color-base-black;
+  margin-bottom: 20px;
+  grid-area: title;
+
+  @media (min-width: $tablet-width) {
+    font-size: 46px;
+    line-height: 58px;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.catalog-sort {
+  margin-top: 28px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  grid-area: sort;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -5px;
+    justify-content: end;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: 22px;
+    margin-bottom: 6px;
+  }
+}
+
+.catalog-sort__desc {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-base-black;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 4px;
+  }
+}
+
+.catalog-select {
+  text-align: right;
+  border: none;
+  color: $color-base-primary;
+  background: $color-bg-grey;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
+}
+
+.form-container {
+  @media (min-width: $desktop-width) {
+    margin-top: -72px;
+    padding: 0;
+    padding-left: 34px;
+    margin-right: 24px;
+  }
+}
+
+.catalog__pagination {
+  overflow: hidden;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: pagination;
+
+  @media (min-width: $tablet-width) {
+    justify-content: right;
+    margin-top: 68px;
+    margin-bottom: 46px;
+    width: 465px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+    margin-bottom: 76px;
+    width: 465px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+.catalog__list {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+    margin-right: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.pagination-desc {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $color-base-primary;
+  }
+}
+
+.pagination__item-disabled {
+  background: $color-alt-lightGrey;
+}
+
+.pagination__item-disabled > .pagination__link {
+  color: $color-base-white;
+}
+
+.pagination__item {
+  cursor: pointer;
+  list-style: none;
+  background: $color-base-white;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $color-alt-primaryLighter;
+  }
+
+  &:hover > .pagination__link {
+    color: $color-base-white;
+  }
+
+  &:focus {
+    background: $color-alt-primaryLighter;
+  }
+
+  &:focus > .pagination__link {
+    color: $color-base-white;
+  }
+
+  &:active {
+    background: $color-alt-primaryDarker;
+  }
+
+  &:active > .pagination__link {
+    color: $color-base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    margin-right: -40px;
+    margin-left: 10px;
+    padding: 0 10px;
+  }
+}
+
+.pagination-desc-next {
+  @media (min-width: $tablet-width) {
+    margin-left: -35px;
+  }
+}
+
+.pagination-current {
+  background: none;
+}
+
+.pagination-current > .pagination__link {
+  color: $color-base-black;
+  font-weight: 600;
+}
+
+.pagination__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-base-primary;
+}
+
+.pagination-button {
+  border: none;
+  background-color: $color-base-white;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover > .pagination-icon {
+    border-top: 2px solid $color-base-white;
+    border-right: 2px solid $color-base-white;
+  }
+
+  &:hover > .pagination-desc {
+    color: $color-base-white;
+  }
+
+  &:focus > .pagination-icon {
+    border-top: 2px solid $color-base-white;
+    border-right: 2px solid $color-base-white;
+  }
+
+  &:active > .pagination-icon {
+    border-top: 2px solid $color-base-white;
+    border-right: 2px solid $color-base-white;
+  }
+
+  &:hover {
+    background: $color-alt-primaryLighter;
+  }
+
+  &:focus {
+    background: $color-alt-primaryLighter;
+  }
+
+  &:active {
+    background-color: $color-alt-primaryDarker;
+  }
+
+  &:disabled > .pagination-icon {
+    border-top: 2px solid $color-base-white;
+    border-right: 2px solid $color-base-white;
+  }
+
+  &:disabled {
+    background-color: $color-alt-lightGrey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 3px;
+    margin-right: -60px;
+    margin-left: -10px;
+    width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 210px;
+  }
+}
+
+.pagination-icon {
+  margin-left: 8px;
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-top: 2px solid $color-base-primary;
+  border-right: 2px solid $color-base-primary;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination-icon-prev {
+  transform: rotate(-135deg);
+  margin-left: 10px;
+}
+
+.pagination-icon-next {
+  transform: rotate(45deg);
+}
